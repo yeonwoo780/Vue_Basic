@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="app">
+        <p>{{num}}</p>
         <app-header v-on:pass="logText"></app-header>
         <app-content v-on:add="incleaseNumber"></app-content>
     </div>
@@ -32,7 +33,7 @@
             }
         }
 
-        new Vue({
+        var vm = new Vue({
             el: "#app",
             components: {
                 "app-header": appHeader,
